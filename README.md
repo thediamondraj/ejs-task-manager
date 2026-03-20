@@ -1,4 +1,4 @@
-# Task Manager App - Handlebars Version
+# Task Manager App - EJS Version
 
 This is a full-stack CRUD web application built with Express, MongoDB, JWT authentication, and refresh tokens.
 
@@ -16,7 +16,7 @@ This is a full-stack CRUD web application built with Express, MongoDB, JWT authe
 - About page
 - Contact page
 - MVC architecture
-- Server-side rendering with Handlebars
+- Server-side rendering with EJS
 
 ## Additional Challenges Completed
 
@@ -32,7 +32,7 @@ This is a full-stack CRUD web application built with Express, MongoDB, JWT authe
 - JWT
 - bcryptjs
 - Cookie Parser
-- Handlebars
+- EJS
 
 ## Installation
 
