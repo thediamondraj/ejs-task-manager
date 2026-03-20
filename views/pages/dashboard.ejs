@@ -1,0 +1,29 @@
+<h2>Your Tasks</h2>
+
+<% if (typeof error !== "undefined") { %>
+  <p class="error"><%= error %></p>
+<% } %>
+
+<form method="POST" action="/tasks">
+  <input name="title" placeholder="New Task" required />
+  <button type="submit">Add Task</button>
+</form>
+
+<% if (tasks.length > 0) { %>
+  <% tasks.forEach(task => { %>
+    <div class="task-box">
+      <p><strong><%= task.title %></strong></p>
+
+      <form method="POST" action="/tasks/<%= task._id %>/edit">
+        <input type="text" name="title" value="<%= task.title %>" required />
+        <button type="submit">Edit</button>
+      </form>
+
+      <form method="POST" action="/tasks/<%= task._id %>/delete">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  <% }) %>
+<% } else { %>
+  <p>No tasks yet.</p>
+<% } %>
